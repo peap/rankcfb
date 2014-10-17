@@ -1,18 +1,7 @@
-var PORT = 3000;
-
-var express = require('express');
+var express = require('./config/express');
 var app = express();
 
-var logger = function(req, res, next) {
-    console.log(req.method + ' - ' + req.path);
-    next();
-};
-
-app.use(logger);
-app.use('/', function(req, res) {
-    res.send('RankCFB');
-});
-
+var PORT = 3000;
 app.listen(PORT);
 console.log('Server running at http://localhost:' + PORT + '/');
 
