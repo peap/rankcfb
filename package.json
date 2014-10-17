@@ -1,0 +1,19 @@
+{
+    "name": "RankCFB",
+    "version": "0.0.1",
+    "description": "Interactive, online college football polling.",
+    "keywords": ["college football", "CFB", "FBS", "computer poll"],
+    "homepage": "https://www.rankcfb.com",
+    "bugs": "https://github.com/peap/rankcfb/issues",
+    "license": "GPL-2.0",
+    "author": {
+        "name": "Eric Petersen"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/peap/rankcfb.git"
+    },
+    "dependencies": {
+        "express": "~4.8.8"
+    }
+}
