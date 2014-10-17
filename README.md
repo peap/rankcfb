@@ -7,7 +7,8 @@ Setup
 -----
 
 * Install OS dependencies
- * Node
+ * [Node.js](http://nodejs.org/)
+ * [mongoDB](http://www.mongodb.org/)
 * Get code
  * `$ git clone github.com/peap/rankcfb.git`
 * Prepare environment
