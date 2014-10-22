@@ -1,12 +1,13 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
-var express = require('./config/express');
+// load models first
 var mongoose = require('./config/mongoose');
-
-var app = express();
 var db = mongoose();
 
+// serve it up
 var PORT = 3000;
+var express = require('./config/express');
+var app = express();
 app.listen(PORT);
 console.log('Server running at http://localhost:' + PORT + '/');
 
