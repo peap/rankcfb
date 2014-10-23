@@ -19,10 +19,12 @@ var UserSchema = new Schema({
         type: String,
         trim: true,
         unique: true,
+        required: true,
     },
     password: {
         type: String,
         trim: false,
+        required: true,
     },
     created: {
         type: Date,
