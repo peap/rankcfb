@@ -33,7 +33,9 @@
           </li>
         <% if(user) { %>
           <li role="presentation">
-            <a title="Settings" href="#"><span class="glyphicon glyphicon glyphicon-cog"></span></a>
+            <a title="Settings" href="#">
+              <span class="glyphicon glyphicon glyphicon-cog"></span>
+            </a>
           </li>
         <% } %>
         </ul>
@@ -46,8 +48,6 @@
           [<a href="/signout">Sign out</a>]
         <% } else {%>
           ...not logged in
-          [<a href="/signin">Sign in</a> |
-          <a href="/signup">Sign up</a>]
         <% } %>
         </div>
       </div>
