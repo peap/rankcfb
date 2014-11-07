@@ -34,10 +34,18 @@ module.exports = function() {
     app.set('view engine', 'ejs');
 
     app.locals.TITLE = 'RankCFB: interactive college football polling';
+    app.locals.navAreas = [
+        {prefix: '', label: 'Home'},
+        {prefix: 'rankings', label: 'Rankings'},
+        {prefix: 'users', label: 'Users'},
+        {prefix: 'teams', label: 'Teams'},
+        {prefix: 'conferences', label: 'Conferences'},
+    ];
 
     app.use(flash());
     app.use(function(req, res, next){
         res.locals.messages = [];
+        res.locals.activeNav = req.path.split('/')[1];
         next();
     });
     app.use(passport.initialize());

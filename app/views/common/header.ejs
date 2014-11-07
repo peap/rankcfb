@@ -19,18 +19,13 @@
 
       <div class="header">
         <ul class="nav nav-pills pull-right" role="tablist">
-          <li role="presentation" class="active">
-            <a href="/">Home</a>
+        <% for (var nav in navAreas) { %>
+          <li role="presentation"
+              <% if (navAreas[nav].prefix === activeNav) { %>class="active"<% } %>
+          >
+            <a href="/<%= navAreas[nav].prefix %>"><%= navAreas[nav].label %></a>
           </li>
-          <li role="presentation">
-            <a href="#">Rankings</a>
-          </li>
-          <li role="presentation">
-            <a href="#">Teams</a>
-          </li>
-          <li role="presentation">
-            <a href="#">Conferences</a>
-          </li>
+        <% } %>
         <% if(user) { %>
           <li role="presentation">
             <a title="Settings" href="#">
