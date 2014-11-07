@@ -22,26 +22,6 @@ var getErrorMessage = function(err) {
     return message;
 };
 
-exports.renderSignin = function(req, res, next) {
-    if (!req.user) {
-        res.render('pages/signin', {
-            messages: req.flash('error') || req.flash('info'),
-        });
-    } else {
-        return res.redirect('/');
-    }
-};
-
-exports.renderSignup = function(req, res, next) {
-    if (!req.user) {
-        res.render('pages/signup', {
-            messages: req.flash('error') || req.flash('info'),
-        });
-    } else {
-        return res.redirect('/');
-    }
-};
-
 exports.signup = function(req, res, next) {
     if (!req.user) {
         var user = new User(req.body);
@@ -51,7 +31,7 @@ exports.signup = function(req, res, next) {
             if (err) {
                 var message = getErrorMessage(err);
                 req.flash('error', message);
-                return res.redirect('/signup');
+                return res.redirect('/');
             }
             req.login(user, function(err) {
                 if (err) {
