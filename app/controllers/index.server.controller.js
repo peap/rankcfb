@@ -3,9 +3,8 @@ exports.render = function(req, res) {
         req.session.lastVisit = new Date();
     }
 
-    res.render('index', {
-        'title': 'RankCFB: interactive college football polling',
-        'header': 'RankCFB',
-        'userFullName': req.user ? req.user.fullName : '',
+    res.render('pages/index', {
+        userFullName: req.user ? req.user.fullName : '',
+        messages: req.flash('error') || req.flash('info'),
     });
 };
