@@ -29,7 +29,12 @@
         <% if(user) { %>
           <li role="presentation">
             <a title="Settings" href="#">
-              <span class="glyphicon glyphicon glyphicon-cog"></span>
+              <span class="glyphicon glyphicon-cog"></span>
+            </a>
+          </li>
+          <li role="presentation">
+            <a title="Sign out" href="/signout">
+              <span class="glyphicon glyphicon-remove"></span>
             </a>
           </li>
         <% } %>
@@ -37,14 +42,6 @@
         <h3 class="text-muted">
           RankCFB
         </h3>
-        <div id="account-bar">
-        <% if (user) { %>
-          ...logged in as <%= user.username %>
-          [<a href="/signout">Sign out</a>]
-        <% } else {%>
-          ...not logged in
-        <% } %>
-        </div>
       </div>
 
     <div id="messages">
