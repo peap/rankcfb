@@ -2,6 +2,7 @@ var bodyParser = require('body-parser');
 var compress = require('compression');
 var config = require('./config');
 var express = require('express');
+var flash = require('connect-flash');
 var methodOverride = require('method-override');
 var morgan = require('morgan');
 var passport = require('passport');
@@ -32,6 +33,7 @@ module.exports = function() {
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
 
+    app.use(flash());
     app.use(passport.initialize());
     app.use(passport.session());
 
