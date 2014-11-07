@@ -33,9 +33,20 @@ module.exports = function() {
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
 
+    app.locals.TITLE = 'RankCFB: interactive college football polling';
+
     app.use(flash());
+    app.use(function(req, res, next){
+        res.locals.messages = [];
+        next();
+    });
     app.use(passport.initialize());
     app.use(passport.session());
+
+    app.use(function(req, res, next){
+        res.locals.user = req.user;
+        next();
+    });
 
     require('../app/routes/index.server.routes.js')(app);
     require('../app/routes/users.server.routes.js')(app);

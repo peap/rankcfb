@@ -3,11 +3,25 @@
   <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/favicon.ico?v=1">
-    <title>RankCFB: interactive college football polling</title>
+    <title><%= TITLE %></title>
   </head>
   <body>
-    <h1><a href="/">RankCFB</a></h1>
-    <% for(var i in messages) { %>
+    <h1>
+      <a href="/">RankCFB</a>
+    </h1>
+    <div id="account-bar">
+    <% if (user) { %>
+      ...logged in as <%= user.username %>
+      [<a href="/signout">Sign out</a>]
+    <% } else {%>
+      ...not logged in
+      [<a href="/signin">Sign in</a> |
+      <a href="/signup">Sign up</a>]
+    <% } %>
+    </div>
+
+    <div id="messages">
+    <% for (var i in messages) { %>
       <div class="flash"><%= messages[i] %></div>
     <% } %>
-
+    </div>

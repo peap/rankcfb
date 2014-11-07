@@ -5,6 +5,5 @@ exports.render = function(req, res) {
 
     res.render('pages/index', {
         userFullName: req.user ? req.user.fullName : '',
-        messages: req.flash('error') || req.flash('info'),
     });
 };
