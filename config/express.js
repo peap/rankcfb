@@ -48,7 +48,7 @@ module.exports = function() {
         next();
     });
 
-    require('../app/routes/index.server.routes.js')(app);
+    require('../app/routes/home.server.routes.js')(app);
     require('../app/routes/users.server.routes.js')(app);
 
     // NOTE: should be after inclusion of routes

@@ -3,7 +3,7 @@ exports.render = function(req, res) {
         req.session.lastVisit = new Date();
     }
 
-    res.render('pages/index', {
+    res.render('pages/home', {
         userFullName: req.user ? req.user.fullName : '',
     });
 };
