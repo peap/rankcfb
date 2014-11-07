@@ -25,7 +25,6 @@ var UserSchema = new Schema({
     password: {
         type: String,
         trim: false,
-        required: true,
         validate: [
             function(password){
                 return password && password.length > 6;
@@ -72,7 +71,7 @@ UserSchema.methods.authenticate = function(password) {
     return this.password === this.hashPassword(password);
 };
 
-UserSchema.statics.findUniqueUserName = function(username, suffix, callback) {
+UserSchema.statics.findUniqueUsername = function(username, suffix, callback) {
     var _this = this;
     var possibleUsername = username + (suffix || '');
     _this.findOne(
@@ -82,7 +81,7 @@ UserSchema.statics.findUniqueUserName = function(username, suffix, callback) {
                 if (!user) {
                     callback(possibleUsername);
                 } else {
-                    return _this.findUniqueUserName(username,
+                    return _this.findUniqueUsername(username,
                                                     (suffix || 0) + 1,
                                                     callback);
                 }

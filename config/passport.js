@@ -19,4 +19,5 @@ module.exports = function() {
     });
 
     require('./passport-strategies/local')();
+    require('./passport-strategies/google')();
 };
