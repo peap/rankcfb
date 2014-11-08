@@ -37,9 +37,10 @@ module.exports = function() {
     app.locals.navAreas = [
         {prefix: '', label: 'Home'},
         {prefix: 'rankings', label: 'Rankings'},
-        {prefix: 'users', label: 'Users'},
+        {prefix: 'stats', label: 'Stats'},
         {prefix: 'teams', label: 'Teams'},
         {prefix: 'conferences', label: 'Conferences'},
+        {prefix: 'users', label: 'Users'},
     ];
 
     app.use(flash());
