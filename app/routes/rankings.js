@@ -2,7 +2,7 @@ var users = require('../controllers/users');
 var rankings = require('../controllers/rankings');
 
 module.exports = function(app) {
-    app.route('/api/rankings')
+    app.route('/api/rankings/')
         .get(rankings.list)
         .post(users.requiresLogin, rankings.create);
 

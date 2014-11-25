@@ -1,0 +1,42 @@
+<section data-ng-controller="RankingsController" data-ng-init="find()">
+
+  <h2>Published Rankings</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Votes</th>
+        <th>User</th>
+        <th>Top Team</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="6"></td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr data-ng-repeat="ranking in publishedRankings">
+        <td data-ng-bind="ranking.votes"></td>
+        <td>
+          <a data-ng-href="#!/users/{{user._id}}"
+              data-ng-bind="ranking.user.username"></a>
+        </td>
+        <td>[todo]</td>
+        <td>
+          <a data-ng-href="#!/rankings/{{ranking._id}}"
+              data-ng-bind="ranking.name"></a>
+        </td>
+        <td data-ng-bind="ranking.description"></td>
+      </tr>
+      <tr data-ng-hide="!rankings || rankings.length">
+        <td colspan="6">
+          There are no published rankings yet, but
+          <a href="#!/rankings/create">you could create a new one.</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>

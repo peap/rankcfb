@@ -1,0 +1,44 @@
+<section data-ng-controller="RankingsController">
+  <h2>New Ranking</h2>
+  <form class="form-horizonal" role="form" data-ng-submit="create()" novalidate>
+
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" name="name" id="name"
+            data-ng-model="name"
+            class="form-control" placeholder="rankster">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Description</label>
+      <div class="col-sm-10">
+        <input type="text" name="description" id="description"
+            data-ng-model="description"
+            class="form-control" placeholder="the rankiest of rankings">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Formula (see help)</label>
+      <div class="col-sm-10">
+        <textarea name="formula" id="formula" class="form-control"
+            data-ng-model="formula"
+            ></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Publish?</label>
+      <div class="col-sm-10">
+        <input type="checkbox" name="published" id="published"
+            data-ng-model="published"
+            class="form-control">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+
+  </form>
+</section>

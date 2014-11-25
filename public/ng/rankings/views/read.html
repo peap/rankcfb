@@ -1,0 +1,15 @@
+<section data-ng-controller="RankingsController" data-ng-init="findOne()">
+  <h2 data-ng-bind="rankings.name"></h2>
+  <div data-ng-show="authentication.user._id == ranking.user._id">
+    <a href="/#!/rankings/{{article._id}}/edit">edit</a>
+    <a href="#" data-ng-click="delete();">delete</a>
+  </div>
+  <h3>
+    Created by
+    <span data-ng-bind="ranking.creator.fullName"></span>
+  </h3>
+  <p data-ng-bind="ranking.description"></p>
+  <p data-ng-bind="ranking.formula"></p>
+  <p>todo: votes</p>
+  <p>todo: results...</p>
+</section>
