@@ -8,7 +8,7 @@ var TeamSchema = new Schema({
     state: String,
     division: {
         type: String,
-        enum: ['FBS', 'FCS'],
+        enum: ['FBS', 'FCS', 'DII', 'DIII'],
     },
 });
 
