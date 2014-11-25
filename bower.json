@@ -2,8 +2,8 @@
   "name": "RankCFB",
   "version": "0.0.1",
   "dependencies": {
-    "angular": "~1.2",
-    "angular-route": "~1.2",
-    "bootstrap": "~3.3.0"
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "bootstrap": "3.3.x"
   }
 }
