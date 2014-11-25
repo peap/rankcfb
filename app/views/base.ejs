@@ -42,12 +42,31 @@
         </h3>
       </div>
 
-    <div id="messages">
-    <% for (var i in messages) { %>
-      <div class="flash alert alert-info">
-        <%= messages[i] %>
+      <div id="messages">
+      <% for (var i in messages) { %>
+        <div class="flash alert alert-info">
+          <%= messages[i] %>
+        </div>
+      <% } %>
       </div>
-    <% } %>
-    </div>
 
-<!-- end header -->
+      <% include ./modals/signin %>
+      <% include ./modals/signup %>
+
+      <section id="ng-view" ng-view></section>
+
+    </div> <!-- container -->
+
+    <script type="text/javascript">
+        window.RankCFB = {};
+        window.RankCFB.user = <%- userJSON || 'null' %>;
+    </script>
+
+    <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
+    <% include ./angular-includes %>
+
+  </body>
+</html>
