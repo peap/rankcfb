@@ -17,7 +17,7 @@ Setup
  * `$ cp config/env/template.js config/env/dev.js`
  * `$ vim config/env/dev.js  # edit settings as necessary`
  * `$ npm update`
- * `$ bower install`
+ * `$ bower update`
  * `$ npm start`
 * Try it!
  * http://127.0.0.1:3000/
