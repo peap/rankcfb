@@ -5,7 +5,10 @@ var mainAppModule = angular.module(
     [
         'ngRoute',
         'home',
+        'rankings',
+        'stats',
         'teams',
+        'conferences',
         'users',
     ]
 );

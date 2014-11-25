@@ -1,5 +1,7 @@
 angular.module('home').controller('HomeController', [
-'$scope', 'Authentication', function($scope, Authentication) {
-    $scope.name = 'RankCFB Home';
-    $scope.user = Authentication.user;
-}]);
+    '$scope', 'Authentication',
+    function($scope, Authentication) {
+        $scope.title = 'Home';
+        $scope.user = Authentication.user;
+    },
+]);
