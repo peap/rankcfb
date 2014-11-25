@@ -5,12 +5,12 @@ module.exports = function() {
     var db = mongoose.connect(config.db);
 
     // register models
-    require('../app/models/user.server.model');
-    require('../app/models/team.server.model');
-    require('../app/models/player.server.model');
-    require('../app/models/statistic.server.model');
-    require('../app/models/statval.server.model');
-    require('../app/models/formula.server.model');
+    require('../app/models/user');
+    require('../app/models/team');
+    require('../app/models/player');
+    require('../app/models/statistic');
+    require('../app/models/statval');
+    require('../app/models/formula');
 
     return db;
 }

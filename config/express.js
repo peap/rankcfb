@@ -56,8 +56,8 @@ module.exports = function() {
         next();
     });
 
-    require('../app/routes/home.server.routes.js')(app);
-    require('../app/routes/users.server.routes.js')(app);
+    require('../app/routes/home')(app);
+    require('../app/routes/users')(app);
 
     // NOTE: should be after inclusion of routes
     app.use(express.static('./public'));

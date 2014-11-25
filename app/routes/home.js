@@ -1,4 +1,4 @@
 module.exports = function(app) {
-    var home = require('../controllers/home.server.controller');
+    var home = require('../controllers/home');
     app.get('/', home.render);
 };

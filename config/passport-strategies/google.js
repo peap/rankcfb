@@ -2,7 +2,7 @@ var config = require('../config');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var passport = require('passport');
 var url = require('url');
-var users = require('../../app/controllers/users.server.controller');
+var users = require('../../app/controllers/users');
 
 module.exports = function() {
     passport.use(new GoogleStrategy(

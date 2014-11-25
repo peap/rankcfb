@@ -1,4 +1,4 @@
-var users = require('../../app/controllers/users.server.controller');
+var users = require('../../app/controllers/users');
 var passport = require('passport');
 
 module.exports = function(app) {
