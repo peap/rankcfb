@@ -59,6 +59,7 @@ module.exports = function() {
 
     require('../app/routes/home')(app);
     require('../app/routes/users')(app);
+    require('../app/routes/rankings')(app);
 
     // NOTE: should be after inclusion of routes
     app.use(express.static('./public'));

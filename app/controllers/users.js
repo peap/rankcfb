@@ -127,7 +127,7 @@ exports.delete = function(req, res, next) {
     });
 };
 
-// middleware to attach User to request
+// middleware
 exports.userById = function(req, res, next, id) {
     User.findOne(
         {_id: id},
@@ -140,4 +140,13 @@ exports.userById = function(req, res, next, id) {
             }
         }
     );
+};
+
+exports.requiresLogin = function(req, res, next) {
+    if (!req.isAuthenticated()) {
+        return res.status(401).send({
+            message: 'User is not logged in.',
+        });
+    }
+    next();
 };
