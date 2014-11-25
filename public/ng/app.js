@@ -3,6 +3,7 @@ var mainAppName = 'rankcfb';
 var mainAppModule = angular.module(
     mainAppName,
     [
+        'ngResource',
         'ngRoute',
         'home',
         'rankings',
