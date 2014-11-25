@@ -46,7 +46,6 @@ module.exports = function() {
     app.use(flash());
     app.use(function(req, res, next){
         res.locals.messages = [];
-        res.locals.activeNav = req.path.split('/')[1];
         next();
     });
     app.use(passport.initialize());
