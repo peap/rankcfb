@@ -4,7 +4,6 @@ exports.render = function(req, res) {
     }
 
     res.render('pages/home', {
-        userFullName: req.user ? req.user.fullName : '',
         messages: req.flash('error'),
     });
 };

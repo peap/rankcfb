@@ -1,36 +1,5 @@
 <% include ../common/header %>
 
-<div class="jumbotron">
-  <h1>Welcome to RankCFB</h1>
-  <% if (user) { %>
-    <p class="lead">
-      Welcome back, <%=user.firstName%>.
-    </p>
-    <p>
-      Now, create some rankings!
-    </p>
-  <% } else { %>
-    <p class="lead">
-      RankCFB is an interactive college football polling application. Create
-      and tweak your own rankings using data straight from the NCAA. Compare
-      your rankings to the AP, Coaches, and College Football Playoff polls.
-    </p>
-    <p>
-      <button type="button" class="btn btn-success btn-lg"
-          data-toggle="modal" data-target="#sign-in-modal">
-        Sign in
-      </button>
-      <a class="btn btn-lg btn-success" href="/oauth/google" role="button">
-        Sign in with Google
-      </a>
-      <button type="button" class="btn btn-primary btn-lg"
-          data-toggle="modal" data-target="#sign-up-modal">
-        Sign up
-      </button>
-    </p>
-  <% } %>
-</div>
-
 <% include ../modals/signin %>
 <% include ../modals/signup %>
 

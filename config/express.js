@@ -53,6 +53,7 @@ module.exports = function() {
 
     app.use(function(req, res, next){
         res.locals.user = req.user;
+        res.locals.userJSON = JSON.stringify(req.user);
         next();
     });
 
