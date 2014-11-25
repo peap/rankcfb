@@ -6,9 +6,9 @@ var TeamSchema = new Schema({
     mascot: String,
     city: String,
     state: String,
-    division: {
-        type: String,
-        enum: ['FBS', 'FCS', 'DII', 'DIII'],
+    conference: {
+        type: Schema.ObjectId,
+        ref: 'Conference',
     },
 });
 

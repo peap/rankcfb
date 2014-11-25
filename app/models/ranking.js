@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var FormulaSchema = new Schema({
+var RankingSchema = new Schema({
     name: String,
     description: String,
     user: {
@@ -11,4 +11,4 @@ var FormulaSchema = new Schema({
     formula: String,
 });
 
-mongoose.model('Formula', FormulaSchema);
+mongoose.model('Ranking', RankingSchema);
