@@ -1,7 +1,7 @@
-var mainApplicationModuleName = 'rankcfb';
+var mainAppName = 'rankcfb';
 
-var mainApplicationModule = angular.module(mainApplicationModuleName, ['teams']);
+var mainAppModule = angular.module(mainAppName, ['ngRoute', 'teams']);
 
 angular.element(document).ready(function() {
-    angular.bootstrap(document, [mainApplicationModuleName]);
+    angular.bootstrap(document, [mainAppName]);
 });
