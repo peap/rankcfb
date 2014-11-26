@@ -1,15 +1,45 @@
 <section data-ng-controller="RankingsController" data-ng-init="findOne()">
-  <h2 data-ng-bind="rankings.name"></h2>
-  <div data-ng-show="authentication.user._id == ranking.user._id">
-    <a href="/#!/rankings/{{article._id}}/edit">edit</a>
-    <a href="#" data-ng-click="delete();">delete</a>
-  </div>
+
+  <h2 data-ng-bind="ranking.name"></h2>
+
   <h3>
     Created by
-    <span data-ng-bind="ranking.creator.fullName"></span>
+    <span data-ng-bind="ranking.user.username"></span>
   </h3>
-  <p data-ng-bind="ranking.description"></p>
-  <p data-ng-bind="ranking.formula"></p>
-  <p>todo: votes</p>
-  <p>todo: results...</p>
+
+  <dl>
+    <dt>Votes</dt>
+    <dd>[todo]</dd>
+    <dt>Description</dt>
+    <dd data-ng-bind="ranking.description"></dd>
+    <dt>Formula</dt>
+    <dd data-ng-bind="ranking.formula"></dd>
+  </dl>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Team</th>
+        <th>Raw Score</th>
+      </tr>
+    </thead>
+    <tfoot>
+        <td colspan="3">
+        </td>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td colspan="3">
+          [todo]
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div data-ng-show="authentication.user._id == ranking.user._id">
+    <a href="/#!/rankings/{{ranking._id}}/edit">edit</a>
+    <a href="#" data-ng-click="delete();">delete</a>
+  </div>
+
 </section>

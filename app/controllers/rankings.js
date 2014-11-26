@@ -103,7 +103,7 @@ exports.vote = function(req, res) {
 // middleware
 exports.rankingById = function(req, res, next, id) {
     Ranking.findById(id)
-        .populate('creator', 'username fullName')
+        .populate('user', 'username fullName')
         .exec(function(err, ranking) {
             if (err) {
                 return next(err);

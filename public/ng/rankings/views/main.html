@@ -4,34 +4,34 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Votes</th>
+        <th>Name</th>
         <th>User</th>
         <th>Top Team</th>
-        <th>Name</th>
         <th>Description</th>
+        <th>Votes</th>
       </tr>
     </thead>
     <tfoot>
       <tr>
-        <td colspan="6"></td>
+        <td colspan="5"></td>
       </tr>
     </tfoot>
     <tbody>
       <tr data-ng-repeat="ranking in publishedRankings">
-        <td data-ng-bind="ranking.votes"></td>
+        <th>
+          <a data-ng-href="#!/rankings/{{ranking._id}}"
+              data-ng-bind="ranking.name"></a>
+        </th>
         <td>
           <a data-ng-href="#!/users/{{user._id}}"
               data-ng-bind="ranking.user.username"></a>
         </td>
         <td>[todo]</td>
-        <td>
-          <a data-ng-href="#!/rankings/{{ranking._id}}"
-              data-ng-bind="ranking.name"></a>
-        </td>
         <td data-ng-bind="ranking.description"></td>
+        <td data-ng-bind="ranking.votes"></td>
       </tr>
-      <tr data-ng-hide="!rankings || rankings.length">
-        <td colspan="6">
+      <tr data-ng-hide="rankings || rankings.length">
+        <td colspan="5">
           There are no published rankings yet, but
           <a href="#!/rankings/create">you could create a new one.</a>
         </td>
