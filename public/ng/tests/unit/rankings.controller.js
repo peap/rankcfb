@@ -36,13 +36,13 @@ describe('Testing Rankings controller', function() {
                 var sampleRankings = [sampleRanking];
 
                 $httpBackend
-                    .expectGET('api/rankings')
+                    .expectGET('/api/rankings')
                     .respond(sampleRankings);
 
                 _scope.find();
                 $httpBackend.flush();
 
-                expect(_scope.rankings).toEqualData(sampleRankings);
+                expect(_scope.publishedRankings).toEqualData(sampleRankings);
             });
         })
     );
