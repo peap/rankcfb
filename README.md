@@ -11,8 +11,9 @@ Setup
  * [Node.js](http://nodejs.org/)
  * [mongoDB](http://www.mongodb.org/)
 * Install global Node.js modules
- * [Bower](http://bower.io/)
- * [Mocha](http://mochajs.org/)
+ * bower: ([Bower](http://bower.io/))
+ * karma-cli: ([Karma](https://karma-runner.github.io/))
+ * mocha: ([Mocha](http://mochajs.org/))
 * Get code
  * `$ git clone github.com/peap/rankcfb.git`
 * Prepare environment
