@@ -18,6 +18,8 @@ Setup
 * Prepare environment
  * `$ cp config/env/template.js config/env/dev.js`
  * `$ vim config/env/dev.js  # edit settings as necessary`
+ * `$ cp config/env/dev.js config/env/test.js`
+ * `$ vim config/env/test.js  # edit settings as necessary`
  * `$ npm update`
  * `$ bower update`
  * `$ npm start`
