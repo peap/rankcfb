@@ -37,6 +37,6 @@
     "supertest": "~0.13.0"
   },
   "scripts": {
-    "test": "NODE_ENV=test mocha --reporter spec app/tests"
+    "test": "./test.sh"
   }
 }
