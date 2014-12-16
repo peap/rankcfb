@@ -33,6 +33,9 @@
     "passport-local": "~1.0.0"
   },
   "devDependencies": {
+    "karma": "~0.12.23",
+    "karma-jasmin": "~0.2.2",
+    "karma-phantomjs-launcher": "~0.1.4",
     "should": "~4.0.4",
     "supertest": "~0.13.0"
   },
