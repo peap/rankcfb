@@ -9,8 +9,9 @@ Setup
 * Install OS dependencies
  * [git](http://www.git-scm.com/)
  * [Node.js](http://nodejs.org/)
+  * [Bower](http://bower.io/)
+  * [Mocha](http://mochajs.org/)
  * [mongoDB](http://www.mongodb.org/)
- * [Bower](http://bower.io/)
 * Get code
  * `$ git clone github.com/peap/rankcfb.git`
 * Prepare environment
