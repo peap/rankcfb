@@ -1,3 +1,4 @@
+// use this template to create at least dev.js and test.js configurations
 module.exports = {
     db: 'mongodb://mongodb-connection.example.com/rankcfb',
     sessionSecret: 'put your secret key here',
