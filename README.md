@@ -12,9 +12,6 @@ Setup
  * [mongoDB](http://www.mongodb.org/)
 * Install global Node.js modules
  * bower: ([Bower](http://bower.io/))
- * karma-cli: ([Karma](https://karma-runner.github.io/))
- * mocha: ([Mocha](http://mochajs.org/))
- * protractor: ([Protractor](https://github.com/angular/protractorl))
 * Get code
  * `$ git clone github.com/peap/rankcfb.git`
 * Prepare environment
@@ -28,5 +25,5 @@ Setup
 * Try it!
  * http://127.0.0.1:3000/
 * Running tests
- * `$ sudo webdriver-manager update`
+ * `$ ./node_modules/.bin/webdriver-manager update`
  * `$ npm test`
