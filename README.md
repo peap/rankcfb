@@ -22,3 +22,5 @@ Setup
  * `$ npm start`
 * Try it!
  * http://127.0.0.1:3000/
+* Running tests
+ * `$ mocha app/tests/`
